@@ -16,6 +16,8 @@ A set of typeclasses to turn your internal Mercury types into fact tables.
 
 % Just implement `to_fact` on your data and everything else is free.
 
+% A fact is just a string
+
 % For reference `to_fact` is defined as: 
 %     `:- typeclass to_fact(T) where [ func to_fact(T) = string ].`
 
