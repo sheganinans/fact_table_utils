@@ -14,7 +14,6 @@ A set of typeclasses to turn your internal Mercury types into fact tables.
     two :: int,
     three :: float).
 
-
 % Just implement `to_fact` on your data and everything else is free.
 
 % For reference `to_fact` is defined as: 
