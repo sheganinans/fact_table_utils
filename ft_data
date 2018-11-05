@@ -1,0 +1,5 @@
+test_data("1", 1, 1.0).
+test_data("2", 2, 2.0).
+test_data("3", 3, 3.0).
+test_data("4", 4, 4.0).
+test_data("5", 5, 5.0).
