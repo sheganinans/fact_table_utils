@@ -49,7 +49,7 @@ main(!IO) :-
     RowsGt3),
 
   io.write(RowsGt3, !IO),
-io.nl(!IO).
+  io.nl(!IO).
 ```
 
 ## TODO
