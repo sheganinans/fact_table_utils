@@ -5,22 +5,6 @@ A set of typeclasses to turn your internal Mercury types into fact tables.
 ## Example
 
 ```mercury
-:- module example.
-
-:- interface.
-
-:- import_module io.
-
-:- pred main(io::di, io::uo) is det.
-
-:- implementation.
-
-:- import_module float.
-:- import_module int.
-:- import_module list.
-:- import_module solutions.
-:- import_module string.
-
 :- import_module to_fact_table.
 
 % Some internal data we want to use as a fact in a fact table
