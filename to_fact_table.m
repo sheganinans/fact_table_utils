@@ -45,11 +45,14 @@
 
 to_fact_table_str(L) = list.foldl(func(F,A) = A ++ to_fact(F), L, "").
 
+:- pred write_fact(io.text_output_stream::in, X::in, io::di, io::uo) is det <= to_fact(X).
+write_fact(Stream, X, !IO) :- io.write_string(Stream, to_fact(X), !IO).
+
 write_fact_table(Name, Table, !IO) :-
   io.open_output(Name, StreamMaybe, !IO),
   (
     StreamMaybe = ok(Stream),
-    io.write_strings(Stream, list.map(to_fact, Table), !IO)
+    io.write_list(Stream, Table, "", write_fact(Stream), !IO)
   ;
     StreamMaybe = error(Error),
     io.write(Error, !IO)

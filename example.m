@@ -23,7 +23,7 @@
     three :: float).
 
 :- instance to_fact(test_data) where [
-  to_fact(TD) = "test_data" ++ to_body({one(TD), two(TD), three(TD)})
+  to_fact(TD) = "test_data" ++ to_body({TD^one, TD^two, TD^three})
 ].
 
 :- pred write_example_facts(io::di, io::uo) is det.
